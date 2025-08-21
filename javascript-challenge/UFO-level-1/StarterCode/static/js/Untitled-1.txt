@@ -1,0 +1,58 @@
+// from data.js
+var tableData = data;
+
+//// Get a reference to the table body
+var tbody = d3.select("tbody");
+var botton=d3.select("#filter-btn");
+
+// Append table
+tableData.forEach((ufo) => {
+    var row = tbody.append("tr");
+    Object.entries(ufo).forEach(([key, value]) => {
+      var cell = row.append("td");
+      cell.text(value);
+    });
+  });
+
+
+// //filter
+// button.on("click", function() {
+
+// // Select the input element and get the raw HTML node
+//     var inputElement = d3.select("#datetime");
+  
+//     // Get the value property of the input element
+//     var inputValue = inputElement.property("value");
+  
+//     var filterData=tableData.filter(tableData => tableData.datetime === inputValue);
+    
+//     filterData.forEach((filterufo) => {
+//         var newRow = tbody.append("tr");
+//         Object.entries(filterufo).forEach(([key, value]) => {
+//           var cell = newRow.append("td");
+//           cell.text(value);
+//         });
+//       });
+// });
+  
+function handleChange() {
+    table_body.html("")
+    // value of the input field
+    var inputText = text.property("value");
+    console.log(inputText);
+    // filtered data
+    var filtered_data = tableData.filter(tableData => tableData.datetime === inputText);
+
+    console.log(filtered_data);
+
+    // rows matches user input
+    filtered_data.forEach(filtered =>{
+        var new_row = table_body.append("tr")
+        Object.entries(filtered).forEach(([key,value]) =>{
+            var new_entries = new_row.append("td").text(value);
+        });
+    });
+
+};
+
+button.on("click",handleChange)
