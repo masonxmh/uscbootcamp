@@ -1,0 +1,282 @@
+/* change navbar color and the height */
+.navbar {
+  min-height: 60px;
+  font-size:15px;
+  color: #f1f1f1;
+  margin-bottom:0;
+  }
+
+/* change the brand and text color */
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+    background-color: #0bada6;
+    min-height:60px;
+     padding:0 15px; 
+    line-height:60px; 
+    width: 180px;
+    color: #f1f1f1;
+    text-align:center;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 210%;
+    position: absolute;
+    top: 0px;
+    left: 80px;         
+}
+
+/* change collapse background color */
+.navbar-collapse{
+  background-color: white ;
+  padding-bottom :0px;
+  margin-top: -1px;
+  margin-bottom:-0.5px;
+}
+/* when dropdown menu is active change color */
+/* .dropdown .dropdown-menu .dropdown-item:active,  */
+.dropdown-item:hover {
+    background-color: #0bada6 !important;
+    /* margin-right: 20px !important; */
+  }
+
+/* when other nav-link is active change color */
+.nav-link:hover {
+background-color:lightgray ;
+margin-right: 5px !important;
+}
+
+/* drop down item font color */
+.dropdown-item {
+    color:black;
+  }
+/* toggler color change */
+.navbar-toggler {
+    border-color: white !important;
+}
+.navbar-toggler-icon {
+    color:white;
+    border-color: white;
+}
+
+/*====================================================================*/
+/* change the navibar color when shrink */
+@media (max-width: 992px) {
+  body{
+      background: white !important;
+    }
+  
+   /* navibar color change */
+  .navbar-custom {
+      background-color: #0bada6 !important;
+      min-height: 60px;
+      margin-left:30px ;
+      margin-right:5px;
+      /* padding-bottom:10px; */
+      
+  }
+  /* reset navbar-band position */
+ .navbar-brand{
+    margin-left: -80px; 
+    position: absolute 
+   }
+ 
+   /* when screen shrink navibar dropdown hover position, the collapse background overwrite the navbar backgroud*/
+   .navbar-collapse{
+       padding-top:10px;
+       margin-top :20px;
+       margin-left:-16px;
+       margin-right: -16px;
+       margin-bottom: -16px;
+   }
+ 
+ 
+ 
+  .navbar-custom #button{
+       margin-right: 40px; 
+     }
+  /* remove the border of the dropdown menu */
+  .dropdown-menu{
+    border:white
+  }
+}
+
+/*======================================================================*/
+
+/* Content */
+h1{
+    color: #0bada6;
+    
+}
+h2 {
+    color: #0bada6;
+    font-weight: bold;
+    font-family: "Times New Roman", Times, serif;
+}
+
+body{
+  background-color:rgb(231, 228, 228);
+  margin-bottom: 100px; /*prevent footer block content*/
+}
+.top-buffer { margin-top:40px; }
+
+/* landing page content image */
+#landing_image{
+    float: left;
+    width: 200px;
+    height: 200px;
+    padding-top: 20 px;
+    margin-right: 20px; 
+}
+/* make the header font bold */
+.header{
+  font-weight: bold;
+  font-family: "Times New Roman", Times, serif;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.content-hr{
+  /* padding-bottom: 20px; */
+}
+.content{
+  margin-top: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  color: darkslategrey;
+  background: white;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  padding-right:50px;
+  padding-left :50px;
+  line-height: 30px;
+  float: left;
+}
+
+/* #landing-content{
+ 
+  padding-right:50px;
+  padding-left :50px;
+  line-height: 30px;
+  float: left;
+  
+} */
+
+.sidebar{
+  margin-top:20px;
+  background: white;
+  padding-top: 30px;
+  
+}
+
+.sidebar_header{
+  padding-left :30px;
+  font-weight: bold;
+  font-family: "Times New Roman", Times, serif;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.sidebar-images{
+  padding: 10px;
+  background: white;
+  margin-top:20px;
+  padding-left:25px;
+  margin-bottom:20px;
+  align-content: center;
+  }
+
+.sidebar-image{
+  width: 150px;
+  height: 150px;
+}
+
+.sidebar-image:hover {
+  opacity: 0.7;
+}
+
+.sidebar-image.active{
+  border: 2px solid #0bada6;
+}
+
+
+/* footer */
+footer {
+  background-color: #333333;
+  border-top-style: solid;
+  border-top-width: 10px;
+  border-top-color: #0bada6;
+  min-height: 60px;
+  /* min-height: 7%; */
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  color: white;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding-top: 20px;
+  }
+
+  /* visulazation page ----------------------*/
+.content-image{
+  max-width: 100%;
+  padding-top: 20 px;
+}
+
+/* comparison page---------------------------*/
+.comp-image{
+  width: 100%;
+  padding-bottom:20px;
+  padding-top:10px;
+}
+/*data page ---------------------------------*/
+/* 
+thead{text-align: left;
+} */
+td{
+  text-align: right;
+}
+.data-content{
+  margin-top: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  color: darkslategrey;
+  background: white;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  padding-left :50px;
+  line-height: 30px;
+  padding-right: 50px;
+}
+
+table{
+  width:100%;
+  border-collapse: collapse;
+}
+
+
+
+
+
+  /* footer when shrunk */
+  /* @media (max-width: 992px) {
+  footer{
+    background-color: white;
+    min-height:60px;
+    text-align: left;
+    color: black;
+    padding-left:30px;
+    padding-bottom:40px;
+    border-top-width: 0px;
+  }
+ 
+} 
+
+<div class="container">
+        <div class="row top-buffer"></div>                
+                <div class="row">
+                        <div class="col-lg-12" style="overflow-x:auto">
+                            <div class= data-content>
+                                    <h1 class="header">Data</h1> <!--content header-->
+                                    <hr class="content-hr">
+                                    <p>The following table includes all of the data used for plotting during this project.</p>
+                                    <br>   
+                            <table border="0" class="dataframe table-striped">
+                            <thead>

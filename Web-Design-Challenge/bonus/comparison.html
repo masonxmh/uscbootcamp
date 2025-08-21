@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Comparison</title>
+  <!-- Bring in our bootstrap stylesheet -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  
+  
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="index.html">Treatment</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarColor01">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                    <button type="button" class="btn btn-primary">Plots</button>
+                    <div class="btn-group" role="group">
+                        <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"></button>
+                        <div class="dropdown-menu dropdown-menu-right float-right" aria-labelledby="btnGroupDrop1" style="position: absolute; transform: translate3d(0px, 38px, 0px); top: 0px; right: 0px; will-change: transform;" x-placement="bottom-start">
+                        <a class="dropdown-item" href="tumor_response.html">Tumor Response</a>
+                        <a class="dropdown-item" href="metasatic_response.html">Metasatic Response</a>
+                        <a class="dropdown-item" href="survival.html">Survival During Treatment</a>
+                        <a class="dropdown-item" href="totalchange.html">Total Change During 45 Days</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="comparison.html">Comparison</a>
+            </li>
+            <li class="nav-item">
+                    <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                        <button type="button" class="btn btn-primary">Data</button>
+                        <div class="btn-group" role="group">
+                            <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"></button>
+                            <div class="dropdown-menu dropdown-menu-right float-right" aria-labelledby="btnGroupDrop1" style="position: absolute; transform: translate3d(0px, 38px, 0px); top: 0px; right: 0px; will-change: transform;" x-placement="bottom-start">
+                            <a class="dropdown-item" href="Clinical Trial Data.html">Tumor Response</a>
+                            <a class="dropdown-item" href="Mouse Drug Data.html">Metasatic Response</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+          </ul>
+        </div>
+      </nav>
+
+    <div class="container">
+        <div class="row top-buffer">
+    <!--Normally these medium columns go full wide on small screen sizes-->
+            <div class="content">
+                <h1 class="header">Comparison: Treatment</h1> <!--content header-->
+                <hr class="content-hr">
+                <p>Click on any plot to get an in-depth analysis.</p>
+                <br>    
+                <section class="row">
+                    <div class="col-lg-6">
+                        <h2 class="comp-header">vs. Tumor_response</h2>
+                        <a href="tumor_response.html"><img class="comp-image" src="Resources/assets/images/Tumor Response to Treatment.png"  alt="tumor_response"></a>
+                    </div>    
+
+                    <div class="col-lg-6">
+                        <h2 class="comp-header">vs. Metasatic_response</h2>
+                        <a href="metasatic_response.html"><img class="comp-image" src="Resources/assets/images/Metastatic Response to Treatment.png"  alt="metasatic_response"></a>
+                    </div>
+                
+                    <div class="col-lg-6">
+                        <h2 class="comp-header">vs. Survival</h2>
+                        <a href="survival.html"><img class="comp-image" src="Resources/assets/images/Survival During Treatment.png"  alt="survival" ></a>
+                    </div>
+                
+                    <div class="col-lg-6">
+                        <h2 class="comp-header">vs. Total Change</h2>
+                        <a href="totalchange.html"><img class="comp-image" src="Resources/assets/images/Total Change During 45 Days Treatment.png"  alt="totalchange"></a> 
+                    </div>
+                </section>
+            </div>  
+        </div><!-- top buffer -->
+    </div> <!-- container -->
+
+
+ <!-- Footer -->
+    <footer>
+        <div class="footer navbar-fixed-bottom">&copy; Copyright Mohan Xing 2019. All Rights Reserved.</div>
+    </footer>
+</body>
+</html>
+
+
+       
