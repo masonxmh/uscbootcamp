@@ -1,0 +1,18 @@
+# API keys and local secrets
+api_keys.py
+.env
+
+# Jupyter
+.ipynb_checkpoints/
+**/.ipynb_checkpoints/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Homework guideline directories
+HW guideline/
+HW guidelines/
+HW Guideline/
+HW Guidelines/
