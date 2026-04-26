@@ -1,0 +1,21 @@
+# Python/Jupyter cache files
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Local environment files
+.env
+*.log
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+Desktop.ini
+.vscode/
+.idea/
+
+# Database exports/backups
+*.sqlite
+*.sqlite3
+*.db
+*.bak

@@ -1,0 +1,19 @@
+# Local API keys and environment files
+api_keys.py
+api_keys2.py
+.env
+
+# Python/Jupyter cache files
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+Desktop.ini
+.vscode/
+.idea/
+
+# Logs
+*.log
