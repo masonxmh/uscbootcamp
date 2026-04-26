@@ -1,65 +1,123 @@
-# machine-learning-challenge
+# Machine Learning Homework: Exoplanet Exploration
+
+This folder contains the machine learning homework using NASA Kepler exoplanet candidate data. The goal is to build and compare classification models that predict `koi_disposition`, which labels Kepler objects of interest as confirmed planets, candidates, or false positives.
 
 ## Background
 
-Over a period of nine years in deep space, the NASA Kepler space telescope has been out on a planet-hunting mission to discover hidden planets outside of our solar system.
+Over nine years, the NASA Kepler space telescope collected data while searching for planets outside our solar system. This project uses the Kepler dataset to train supervised machine learning models that classify exoplanet candidates from observed features.
 
-### Preprocess the Data
+Data source:
 
-* Preprocess the dataset prior to fitting the model.
-* Perform feature selection and remove unnecessary features.
-* Use `MinMaxScaler` to scale the numerical data.
-* Separate the data into training and testing data.
+- [NASA Kepler Exoplanet Search Results on Kaggle](https://www.kaggle.com/nasa/kepler-exoplanet-search-results)
 
-### Tune Model Parameters
+## Project Requirements
 
-* Use `GridSearch` to tune model parameters.
-* Tune and compare at least two different classifiers.
+The homework workflow includes:
 
-- - -
+- Preprocess the dataset before fitting models.
+- Perform feature selection and remove unnecessary features.
+- Scale numerical data.
+- Split the data into training and testing sets.
+- Use `GridSearchCV` to tune model parameters.
+- Train and compare at least two classifiers.
 
-## Resources
+## Files
 
-* [Exoplanet Data Source](https://www.kaggle.com/nasa/kepler-exoplanet-search-results)
+- `exoplanet_data.csv`: Original Kepler exoplanet dataset used for modeling.
+- `exoplanet_data_select.csv`: Reduced feature dataset created after feature selection.
+- `model_1.ipynb`: Support Vector Machine workflow.
+- `model_2.ipynb`: Logistic Regression workflow.
+- `svc.sav`: Saved SVM model.
+- `logicreg.sav`: Saved Logistic Regression model.
 
-## Analysis
+## Feature Selection
 
----
-### Feature Selection
+The notebooks use a filter-based feature selection approach. Features were reviewed using correlation analysis and then reduced to a selected subset stored in `exoplanet_data_select.csv`.
 
-* The first step after reading the data to a dataframe is to decide which features to keep for the model. By using Filter Method filter and take only the subset of the relevant features. The model is built after selecting the features. The filtering here is done using correlation matrix and it is most commonly done using Pearson correlation.
+The selected dataset keeps `koi_disposition` as the target variable and includes features such as:
 
-* Here we will first plot the Pearson correlation heatmap and see the correlation of independent variables with the output variable MEDV. We will only select features which has correlation of above 0.01 (taking absolute value) with the output variable.
+- False-positive flags
+- Orbital period error fields
+- Transit timing error fields
+- Impact and duration error fields
+- Transit depth
+- Equilibrium temperature
+- Signal-to-noise ratio
+- Stellar gravity fields
+- Right ascension, declination, and Kepler magnitude
 
-* The correlation coefficient has values between -1 to 1
-— A value closer to 0 implies weaker correlation (exact 0 implying no correlation)
-— A value closer to 1 implies stronger positive correlation
-— A value closer to -1 implies stronger negative correlation
+## Model 1: Support Vector Machine
 
-* One of the assumptions of linear regression is that the independent variables need to be uncorrelated with each other. If these variables are correlated with each other, then we need to keep only one of them and drop the rest. So I check the correlation of selected features with each other.
+Notebook:
 
-* Selecting columns based on p-value, we will be selecting the columns based on how they affect the p-value. We are the removing the column diagnosis because it is the column we are trying to predict
+- `model_1.ipynb`
 
-### Model-1 SVM
+Workflow:
 
-* After deciding which features to keep next step was assigning X and y values for the model to perform split data to get train and test data for the model.
+- Read and clean the Kepler dataset.
+- Select modeling features.
+- Split data into training and testing sets.
+- Scale the data.
+- Train an SVM classifier.
+- Tune parameters with `GridSearchCV`.
+- Save the fitted model as `svc.sav`.
 
-* Next step is to scale and normalize the data to create more accurate model that has less gap between data points so they all have acurate weights for the model. Initially, using MinMaxScaler to scale the data with SVM model, the training and testing scores were around 0.85. Chaning to StandardScaler to scale the data resulted better numbers for the scores, Training Training Data Score: 0.8481785237459469 and Testing Data Score: 0.8558352402745996
+Reported tuned parameters:
 
-* Using GridSearchCV to tune the model's parameters and changing the grid parameters kernel, C and gamma then get best parameters:
+```text
 {'C': 200, 'gamma': 1e-05, 'kernel': 'linear'}
- 0.8640077063579273
+```
 
-### Model-2 Logistic Regression
-* For this model, data cleaning and preprocessing steps were the same as SVM model.
+Reported GridSearch score:
 
-* Using MinMaxScaler to scale and normalize the data.
+```text
+0.8640077063579273
+```
 
-* The scores for training and testing data was :Training Data Score: 0.8458897577722678 and Testing Data Score: 0.8627002288329519
+## Model 2: Logistic Regression
 
-* Using GridSearchCV to tune the model's parameters, and changing C values, and increasing the number of iterations max_iter then get the best parameter:
+Notebook:
+
+- `model_2.ipynb`
+
+Workflow:
+
+- Reuse the cleaned and selected feature data.
+- Split data into training and testing sets.
+- Scale the data.
+- Train a Logistic Regression classifier.
+- Tune `C` and `max_iter` with `GridSearchCV`.
+- Save the fitted model as `logicreg.sav`.
+
+Reported tuned parameters:
+
+```text
 {'C': 800, 'max_iter': 200}
-0.8632459849074727
+```
 
-### Conclusion
-* As a result, the two models SVM and LogisticRegression didn't have any significant difference between them for this data. We can say SVM model performs sligtly better.
+Reported GridSearch score:
+
+```text
+0.8632459849074727
+```
+
+## Conclusion
+
+Both the SVM and Logistic Regression models performed similarly on this dataset. The SVM model produced a slightly higher tuned score, so it was the stronger model in this comparison.
+
+## How To Review
+
+Open the notebooks in Jupyter Notebook or JupyterLab:
+
+1. `model_1.ipynb`
+2. `model_2.ipynb`
+
+The saved model files are already included for review:
+
+- `svc.sav`
+- `logicreg.sav`
+
+## Notes
+
+- Notebook checkpoints and generated cache files are ignored by `.gitignore`.
+- The existing `.sav` files are intentionally kept trackable because they are final model outputs for the assignment.
