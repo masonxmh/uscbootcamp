@@ -1,0 +1,31 @@
+# Homework guideline directory
+HW guideline/
+HW guidelines/
+HW Guideline/
+HW Guidelines/
+
+# Python/Jupyter cache files
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Local environment files
+.env
+*.log
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+Desktop.ini
+.vscode/
+.idea/
+
+# Spark/Hadoop/generated output
+spark-warehouse/
+metastore_db/
+derby.log
+*.parquet/
+*.orc/
+output/
+tmp/
+temp/
