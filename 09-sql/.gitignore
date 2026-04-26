@@ -1,0 +1,19 @@
+# Jupyter
+.ipynb_checkpoints/
+**/.ipynb_checkpoints/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Local database configuration
+.env
+config.py
+database.ini
+
+# Homework guideline directories
+HW guideline/
+HW guidelines/
+HW Guideline/
+HW Guidelines/
