@@ -1,0 +1,25 @@
+# Homework guideline directory
+HW guideline/
+HW guidelines/
+HW Guideline/
+HW Guidelines/
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+Desktop.ini
+.vscode/
+.idea/
+
+# Python/Jupyter cache files
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Local environment files
+.env
+*.log
+
+# Local browser drivers
+chromedriver.exe
+geckodriver.exe
