@@ -1,0 +1,27 @@
+# Homework guideline directory
+HW guideline/
+HW guidelines/
+HW Guideline/
+HW Guidelines/
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+Desktop.ini
+.vscode/
+.idea/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Node dependencies/build output
+node_modules/
+dist/
+build/
+
+# Temporary files
+*.tmp
+*.temp

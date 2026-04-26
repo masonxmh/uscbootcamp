@@ -1,10 +1,17 @@
-# JavaScript Homework: UFO Sightings
+# JavaScript Homework: JavaScript and DOM Manipulation
 
-This folder contains the JavaScript and DOM manipulation homework. The project builds an interactive UFO sightings table using JavaScript, D3, HTML, CSS, Bootstrap, and a local JavaScript dataset.
+This folder contains the JavaScript and DOM manipulation homework for the UFO sightings dataset. The project builds an interactive table from a JavaScript array of sighting records and lets users filter the table with form inputs.
 
 ## Project Overview
 
-The app loads UFO sighting records from `data.js`, renders them into an HTML table, and lets the user filter the displayed results from a form. The table includes the sighting date, city, state, country, shape, duration, and comments.
+The homework guideline asks for a static web page that uses pure JavaScript, D3.js, HTML, and CSS to:
+
+- Load the UFO dataset from `static/js/data.js`.
+- Dynamically append table rows for each UFO sighting.
+- Display columns for date/time, city, state, country, shape, duration, and comments.
+- Filter the table based on user input.
+
+This folder includes both the required Level 1 date-search app and the optional Level 2 multi-filter app.
 
 ## Folder Structure
 
@@ -22,7 +29,7 @@ Each app includes:
 
 ## Level 1: Automatic Table and Date Search
 
-`UFO-level-1/StarterCode` renders the full sightings dataset when the page loads. The user can enter a date, click `Filter Table`, and the table updates to show only sightings matching that date.
+`UFO-level-1/StarterCode` satisfies the required homework section. It renders the full sightings dataset when the page loads. The user can enter a date, click `Filter Table`, and the table updates to show only sightings matching that date.
 
 Filter field:
 
@@ -30,7 +37,7 @@ Filter field:
 
 ## Level 2: Multiple Search Categories
 
-`UFO-level-2/StarterCode` expands the filter form so users can search across several fields. Blank fields are ignored, so users can filter by one field or combine multiple filters.
+`UFO-level-2/StarterCode` satisfies the optional extension. It expands the filter form so users can search across several fields. Blank fields are ignored, so users can filter by one field or combine multiple filters.
 
 Filter fields:
 
@@ -54,3 +61,4 @@ No local server is required because the apps use static HTML, CSS, JavaScript, a
 - The filtering logic is written in `static/js/app.js`.
 - The dataset is stored as a JavaScript array in `static/js/data.js`.
 - User-entered Level 2 text filters are converted to lowercase before comparison, matching the lowercase values in the dataset.
+- The apps are static pages and do not require a backend server.
