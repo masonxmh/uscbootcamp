@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Grayscale - Start Bootstrap Theme</title>
+   
+  <link href="assets/css/style.css" rel="stylesheet">
+  <!-- Bootstrap core CSS -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="assets/css/grayscale.min.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">Chest Xray Images</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#about">Background</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#data">Data</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#model">Model</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#projects">Analysis</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#signup">Predictions</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="masthead">
+    <div class="container d-flex h-100 align-items-center">
+      <div class="mx-auto text-center">
+        <h1 class="mx-auto my-0 text-uppercase">Deep Learning</h1>
+        <h2 class="text-white-50 mx-auto mt-2 mb-5">A Model for Chest X-rays.</h2>
+        <a href="#about" class="btn btn-primary js-scroll-trigger">Get Started</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Vicky Section -->
+  <!-- Background Section -->
+  <section id="about" class="about-section text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2 class="text-white mb-4">Background</h2>
+          <p class="text-white-50">In late 2019, the outbreak and spread of Coronavirus sent the world into a panic. 
+            Thousands of people around the world get confirmed each day. This is the virus that can affect the respiratory system and cause pneumonia. 
+            A huge number of suspected patients began to go to various testing sites for testing. 
+            And at the same time, the lung testing departments of major hospitals are also overcrowded. 
+            In the United States, the speed of lung X- rays tests is limited. 
+            In an emergency, the results of a chest X-ray can be available within a short period of time. 
+            Otherwise, results are usually ready in 1 or 2 days. In most cases, results cannot be given directly to the patient or family at the time of the test. 
+            In this case, our team members decided to make a model of machine learning, by training pictures of normal patients and patients with pneumonia. 
+            Use this method to improve the speed of pneumonia diagnosis and treatment.</p>
+        </div>
+      </div>
+      <img src="assets/img/lungs.png" class="img-fluid" alt="">
+    </div>
+  </section>
+  
+
+  <!-- Data Section -->
+  <section id="data" class="projects-section bg-light">
+    <div class="container">
+
+      <!-- X-ray -->
+      <div class="row align-items-center  mb-2 mb-lg">
+        <div class="col-lg-6 col-lg-6">
+          <img class="img-fluid x-ray mb-3 mb-lg" src="assets/img/normal.jpg" alt="">
+        </div>
+        <div class="col-lg-6 col-lg-6">
+          <img class="img-fluid x-ray mb-3 mb-lg" src="assets/img/pneumonia.jpg" alt="">
+        </div>
+      </div>
+
+      <div class="row zero_row mb-0">
+        <div class="col-xl-12 col-lg-12">
+          <div class="featured-text text-center text-lg-left mb-0">
+            <h4>Normal V.S. Pneumonia X-rays</h4>
+            <p class="text-black-50 mb-4">Data Sources: <a href="https://data.mendeley.com/datasets/rscbjbr9sj/3">data.mendeley.com</a>, <a href="https://project3-data.s3.amazonaws.com/chest_xray.zip">Amazon Web Services</a</p>
+          </div>
+        </div>
+      </div>
+      <!-- Pie Chart -->
+      <div class="row align-items-center no-gutters mb-4 mb-lg-5">
+        <div class="col-xl-8 col-lg-7">
+          <img class="img-fluid mb-3 mb-lg-0" src="assets/img/pie.png" alt="">
+        </div>
+        <div class="col-xl-4 col-lg-5">
+          <div class="featured-text text-center text-lg-left">
+            <h4>Percentage of Cases</h4>
+            <p class="text-black-50 mb-0">Totally, There are 73% of cases are Pneumonia, 27% of cases are normal</p>
+          </div>
+        </div>
+      </div>
+      <!-- Bar Chart -->
+      <div class="row align-items-center no-gutters mb-4 mb-lg-5">
+        <div class="col-xl-8 col-lg-7">
+          <img class="img-fluid mb-3 mb-lg-0" src="assets/img/bar.png" alt="">
+        </div>
+        <div class="col-xl-4 col-lg-5">
+          <div class="featured-text text-center text-lg-left">
+            <h4>Train, Validation and Test</h4>
+            <p class="text-black-50 mb-0">Divide all data sets into three part: Train, validation and test by 8:1:1. Save those into three main folders, Each folder has 2 subfolders which are Normal case and Pneumonia case for train model.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!-- Vicky Section End-->
+
+  <!-- Mason Section End-->
+  <!-- Model Section -->
+  <section id="model" class="projects-section bg-light">
+    <div class="container">    
+      <!-- Model Theory-->
+      <div class="row align-items-center  mb-4 mb-lg-5">
+        <div class="col-xl-8 col-lg-7">
+          <img class="img-fluid mb-3 mb-lg" src="assets/img/vgg.png" alt="">
+        </div>
+        <div class="col-xl-4 col-lg-5">
+          <img class="img-fluid mb-3 mb-lg" src="assets/img/layer.png" alt="">
+        </div>
+      </div>
+
+      <div class="row mb-4 mb-lg-5 mb-0 mb-lg-5">
+        <div class="col-xl-12 col-lg-12">
+          <div class="featured-text text-center text-lg-left mb-0 mb-lg-5">
+            <h4>Model Architecture</h4>
+            <p class="text-black-50 mb-50">Grayscale is open source and MIT licensed. This means you can use it for any project - even commercial projects! Download it, customize it, and publish your website!</p>
+          </div>
+        </div>
+      </div>
+
+    <!-- Model Parameters -->
+    <div class="row align-items-center no-gutters mb-0 mb-lg-5">
+      <div class="col-xl-8 col-lg-7">
+        <img class="img-fluid mb-0 mb-lg-0" src="assets/img/vgg16-2.png" alt="">
+      </div>
+      <div class="col-xl-4 col-lg-5">
+        <div class="featured-text text-center text-lg-left">
+          <h4>Model</h4>
+          <p class="text-black-50 mb-0 mb-lg-0">Grayscale is open source and MIT licensed. This means you can use it for any project - even commercial projects! Download it, customize it, and publish your website!</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Model Performance-->
+    <div class="row align-items-center  mb-4 mb-lg-10">
+      <div class="col-xl-12 col-lg-12">
+        <img class="img-fluid mb-3 mb-lg" src="assets/img/Performance.png" alt="">
+      </div>
+    
+    <div class="row mb-10">
+      <div class="col-xl-12 col-lg-12">
+        <div class="featured-text text-center text-lg-left mb-0 mb-lg-0">
+          <h4>Model Performance</h4>
+          <p class="text-black-50 mb-8">Grayscale is open source and MIT licensed. This means you can use it for any project - even commercial projects! Download it, customize it, and publish your website!</p>
+        </div>
+      </div>
+    </div>
+
+    
+
+    </div>
+  </section>
+      
+  
+  <!-- Analysis Section -->
+  <section id="projects" class="projects-section bg-light">
+    <div class="container">    
+      
+      <!-- CM Chart -->
+      <div class="row align-items-center no-gutters mb-4 mb-lg-5">
+        <div class="col-xl-8 col-lg-7">
+          <img class="img-fluid mb-3 mb-lg-0" src="assets/img/CM-Modified.png" alt="">
+        </div>
+        <div class="col-xl-4 col-lg-5">
+          <div class="featured-text text-center text-lg-left">
+            <h4>Shoreline</h4>
+            <p class="text-black-50 mb-0">Grayscale is open source and MIT licensed. This means you can use it for any project - even commercial projects! Download it, customize it, and publish your website!</p>
+          </div>
+        </div>
+      </div>
+      <!-- Accuracy Table -->
+      <div class="row align-items-center no-gutters mb-4 mb-lg-5">
+        <div class="col-xl-8 col-lg-7">
+          <img class="rounded float-right ml-auto mb-lg-0" src="assets/img/accuracy.png" alt="">
+        </div>
+        <div class="col-xl-4 col-lg-5">
+          <div class="featured-text text-center text-lg-left">
+            <h4>Shoreline</h4>
+            <p class="text-black-50 mb-0">Grayscale is open source and MIT licensed. This means you can use it for any project - even commercial projects! Download it, customize it, and publish your website!</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Prediction Section -->
+  <section id="signup" class="signup-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 col-lg-8 mx-auto text-center">
+
+          <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
+          <h2 class="text-white mb-5">Subscribe to receive updates!</h2>
+
+        </div>
+      </div>
+
+      <!-- Prediction -->
+      <div class="row align-items-center  mb-4 mb-lg-10">
+        <div class="col-xl-12 col-lg-12">
+          <img class="img-fluid mb-3 mb-lg" src="assets/img/prediction.png" alt="">
+        </div>
+      </div>
+      <div class="row align-items-center  mb-4 mb-lg-10">
+        <div class="col-xl-12 col-lg-12">
+          <img class="img-fluid mb-3 mb-lg" src="assets/img/prediction2.png" alt="">
+        </div>
+      </div>
+        <div class="row mb-10">
+          <div class="col-xl-12 col-lg-12">
+            <div class="featured-text text-center text-lg-left mb-0 mb-lg-0">
+              <h4 class="text-white mb-5">Prediction</h4>
+              <p class="text-white-50 mb-8">Grayscale is open source and MIT licensed. This means you can use it for any project - even commercial projects! Download it, customize it, and publish your website!</p>
+            </div>
+          </div>
+    </div>
+  </section>
+
+  <!-- Analysis Section Copy -->
+  <!-- <section id="projects" class="projects-section bg-light">
+    <div class="container">    
+      
+      <div class="row justify-content-center no-gutters mb-lg-0">
+        <div class="col-lg-6">
+          <img class="img-fluid" src="assets/img/demo-image-01.jpg" alt="">
+        </div>
+        <div class="col-lg-6">
+          <div class="bg-black text-center h-100 project">
+            <div class="d-flex h-100">
+              <div class="project-text w-100 my-auto text-center text-lg-left">
+                <h4 class="text-white">Misty</h4>
+                <p class="mb-0 text-white-50">An example of where you can put an image of a project, or anything else, along with a description.</p>
+                <hr class="d-none d-lg-block mb-0 ml-0">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="row justify-content-center no-gutters">
+        <div class="col-lg-6">
+          <img class="img-fluid" src="assets/img/demo-image-02.jpg" alt="">
+        </div>
+        <div class="col-lg-6 order-lg-first">
+          <div class="bg-black text-center h-100 project">
+            <div class="d-flex h-100">
+              <div class="project-text w-100 my-auto text-center text-lg-right">
+                <h4 class="text-white">Mountains</h4>
+                <p class="mb-0 text-white-50">Another example of a project with its respective description. These sections work well responsively as well, try this theme on a small screen!</p>
+                <hr class="d-none d-lg-block mb-0 mr-0">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section> -->
+
+  <!-- Signup Section -->
+  <!-- <section id="signup" class="signup-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 col-lg-8 mx-auto text-center">
+
+          <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
+          <h2 class="text-white mb-5">Subscribe to receive updates!</h2>
+
+          <form class="form-inline d-flex">
+            <input type="email" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="inputEmail" placeholder="Enter email address...">
+            <button type="submit" class="btn btn-primary mx-auto">Subscribe</button>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- Contact Section -->
+  <!-- <section class="contact-section bg-black">
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-md-4 mb-3 mb-md-0">
+          <div class="card py-4 h-100">
+            <div class="card-body text-center">
+              <i class="fas fa-map-marked-alt text-primary mb-2"></i>
+              <h4 class="text-uppercase m-0">Address</h4>
+              <hr class="my-4">
+              <div class="small text-black-50">4923 Market Street, Orlando FL</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-3 mb-md-0">
+          <div class="card py-4 h-100">
+            <div class="card-body text-center">
+              <i class="fas fa-envelope text-primary mb-2"></i>
+              <h4 class="text-uppercase m-0">Email</h4>
+              <hr class="my-4">
+              <div class="small text-black-50">
+                <a href="#">hello@yourdomain.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-3 mb-md-0">
+          <div class="card py-4 h-100">
+            <div class="card-body text-center">
+              <i class="fas fa-mobile-alt text-primary mb-2"></i>
+              <h4 class="text-uppercase m-0">Phone</h4>
+              <hr class="my-4">
+              <div class="small text-black-50">+1 (555) 902-8832</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="social d-flex justify-content-center">
+        <a href="#" class="mx-2">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="#" class="mx-2">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="#" class="mx-2">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+
+    </div>
+  </section> -->
+
+  <!-- Footer -->
+  <footer class="bg-black small text-center text-white-50">
+    <div class="container">
+      Copyright &copy; Mohan Xing, Peirang Xu, Vicky Zhang 2020
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="assets/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="assets/js/grayscale.min.js"></script>
+
+</body>
+
+</html>
